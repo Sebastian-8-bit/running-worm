@@ -1,0 +1,7 @@
+flask
+flask_session
+cs50
+werkzeug
+datetime
+
+p5.js

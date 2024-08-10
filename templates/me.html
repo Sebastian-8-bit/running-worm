@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% block title %}
+    Me
+{% endblock %}
+{% block main %}
+<div class="py-5 col-12 container text-center">
+    <h1 class="display-2 titles">{{ user[0]["username"] }}</h1>
+    <table class="table">
+        <thead>
+            <tr class="titles">
+                <td class="text-start"> Time </td>
+                <td class="text-start"> Time Played </td>
+                <td class="text-start"> Comment </td>
+                <td class="text-start"> Rank </td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for you in user %}
+                <tr class="textColor">
+                    <td class="text-start"> {{ you["time"] }} </td>
+                    <td class="text-start"> {{ you["played_time"] }} s</td>
+                    <td class="text-start"> {{ you["comment"] }} </td>
+                    {% set rank = "" %}
+                    {% for player in players %}
+                        {% if you["id"] == player["id"] %}
+                            <td class="text-start"> {{ player["rankNumber"] }} </td> 
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a class="btn buttonColor" href="/" role="button">Home</a>
+</div>
+{% endblock %}

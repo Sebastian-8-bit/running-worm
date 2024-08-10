@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block title %}
+    Error
+{% endblock %}
+
+{% block main %}
+<div class="py-5 col-12 container text-center textColor">
+    <h1 class="display-3 mb-3">ERROR: <span class="textGlowColor">{{ code }}</span></h1>
+    <h2 class="display-5 mb-5"> {{ error_message }} </h2>
+    <a class="btn buttonColor" href="{{ Redirect }}" role="button">Back</a>
+</div>
+{% endblock %}

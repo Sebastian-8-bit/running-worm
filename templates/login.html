@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+    <div class="py-5 col-md-3 col-6 container text-center">
+        <form action="/login" method="post">
+            <div class="mb-3">
+                <input type="text" class=" inputColor form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="username" placeholder="Username" autocomplete="off" autofocus maxlength="15">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="inputColor form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn buttonColor">Log in</button>
+        </form>
+        <a href="/register" role="button" class="btn buttonColor mt-3">Register</a>
+    </div>
+{% endblock %}

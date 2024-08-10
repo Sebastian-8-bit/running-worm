@@ -1,0 +1,133 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(5, 20, 34);
+  justify-content: space-between;
+}
+nav {
+  background-color: rgb(5, 20, 34);
+}
+
+footer {
+  background-color: rgb(5, 20, 34);
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+
+
+
+
+.titles {
+  font-weight: bolder;
+  color: rgb(252, 240, 151);
+}
+
+.textColor {
+  color: white;
+}
+
+.buttonColor {
+  background-color: rgba(252, 240, 151, 0);
+  color: rgb(252, 240, 151);
+  border-style: solid;
+  border-color: rgb(252, 240, 151);
+}
+.buttonColor:hover {
+  background-color: rgba(252, 240, 151);
+  color: rgb(5, 20, 34);
+}
+
+.linkColor {
+  color: rgb(252, 240, 151);
+}
+
+
+.textDarkColor {
+  color: rgb(5, 20, 34);
+}
+
+.textGlowColor {
+  color:rgb(252, 240, 151) !important;
+}
+
+.inputColor {
+  background-color: rgb(5, 20, 34);
+  color: white;
+  border-color: rgb(252, 240, 151);
+  outline-style: none !important;
+}
+
+.inputColor::placeholder {
+  color: white;
+}
+
+.inputColor:focus {
+  background-color: rgb(5, 20, 34);
+  border-style: dashed;
+  border-color: rgb(252, 240, 151);
+  color: white;
+  outline: none;
+  box-shadow: none;
+}
+
+.inputColor:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.inputColor:focus::placeholder {
+  color: white;
+}
+
+
+.toggler {
+  border-style: none;
+  outline-style: none;
+}
+
+.toggler:focus {
+  outline-style: none;
+}
+
+.toggler:hover {
+  border-style: none;
+  outline-style: none;
+}
+
+.toggler:active {
+  outline-style: none !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.gamediv {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: white;
+}
+
+.gameEndtext {
+  text-shadow: 1px 1px 1px rgb(5, 20, 34);
+}
+
+.gameEndbutton {
+  box-shadow: 1px 1px 1px rgb(5, 20, 34);
+  text-shadow: 1px 1px 1px rgb(5, 20, 34);
+}
+
+.gameEndbutton:hover {
+  box-shadow: none;
+  text-shadow: none;
+}

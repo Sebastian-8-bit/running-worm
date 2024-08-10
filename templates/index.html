@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<div class="container-lg">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-lg-5 text-center text-lg-start">
+            <h1>
+                <div class="container-lg">
+                    <div class="container textColor">
+                        <h1 class="display-2 titles">Running Worm</h1>
+                        <p class="lead">As a ravenous worm, </p>
+                        <p class="lead">You're on a quest for a delicious meal. But watch out—while you're hunting for food, big fish are hunting for you.</p class="display-5">  
+                    </div>
+                </div>
+                <div class="ms-4">
+                    <a href="/game" role="button" class="btn buttonColor">Game</a>
+                </div>
+            </h1>
+        </div>
+        <div class="col-lg-6 col-10 text-center">
+            <table class="table textColor">
+                <thead>
+                    <tr class="titles">
+                        <td class="text-start"> Rank </td>
+                        <td class="text-start"> Username </td>
+                        <td class="text-start"> Time Played </td>
+                        <td class="text-start"> Comment </td>
+                        <td class="text-start"> Time </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for player in players %}
+                        <tr>
+                            <td class="text-start"> {{ player["rankNumber"] }} </td>
+                            <td class="text-start"> {{ player["username"] }} </td>
+                            <td class="text-start"> {{ player["played_time"] }} s</td>
+                            <td class="text-start"> {{ player["comment"] }} </td>
+                            <td class="text-start"> {{ player["time"] }} </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
